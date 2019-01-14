@@ -9,17 +9,22 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import VueSocketIO from 'vue-socket.io';
 
 @Component({
   components: {
     HelloWorld,
   },
 })
+
 export default class Home extends Vue {
-  data(){
+  public data() {
     return {
-      msg:'aa'
+      msg: 'aa',
+      test: 'bb'
     }
   }
+
 }
+
 </script>

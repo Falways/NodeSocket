@@ -38,10 +38,10 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
-  @Prop() private arr!: any;
+  @Prop() private arr!: any[];
 
-  firstClick():void{
-    window.alert('a')
+  public firstClick(): void {
+    window.alert('a');
   }
 }
 </script>
