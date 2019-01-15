@@ -3,6 +3,7 @@
     <!--<img alt="Vue logo" src="../assets/logo.png">-->
     <!--<HelloWorld msg="Welcome to Your Vue.js + TypeScript App" arr="[1,2,3]"/>-->
     {{msg}}
+    <button @click="shadehand">connect</button>
   </div>
 </template>
 
@@ -20,9 +21,13 @@ import VueSocketIO from 'vue-socket.io';
 export default class Home extends Vue {
   public data() {
     return {
-      msg: 'aa',
-      test: 'bb'
+      msg : 'off',
+      test : 'bb'
     }
+  }
+  shadehand(){
+     Vue.use(VueSocketIO,socketio('http://192.168.68.2:12360'));
+     this.$socket.emit('a')
   }
 
 }
